@@ -1,7 +1,8 @@
 package fr.imie.project;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by fred on 17/05/17.
@@ -15,10 +16,10 @@ import java.sql.Date;
 public class CampagneEntity {
     private int id;
     private String nom;
-    private Date datefin;
+    private Timestamp datefin;
     private String nomconsclasse;
     private String trimconsclasse;
-    private Date dateconsclasse;
+    private Timestamp dateconsclasse;
     private String statut;
     private String urlcollective;
 
@@ -44,11 +45,11 @@ public class CampagneEntity {
 
     @Basic
     @Column(name = "datefin")
-    public Date getDatefin() {
+    public Timestamp getDatefin() {
         return datefin;
     }
 
-    public void setDatefin(Date datefin) {
+    public void setDatefin(Timestamp datefin) {
         this.datefin = datefin;
     }
 
@@ -74,11 +75,11 @@ public class CampagneEntity {
 
     @Basic
     @Column(name = "dateconsclasse")
-    public Date getDateconsclasse() {
+    public Timestamp getDateconsclasse() {
         return dateconsclasse;
     }
 
-    public void setDateconsclasse(Date dateconsclasse) {
+    public void setDateconsclasse(Timestamp dateconsclasse) {
         this.dateconsclasse = dateconsclasse;
     }
 

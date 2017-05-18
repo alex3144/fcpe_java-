@@ -1,7 +1,9 @@
 package fr.imie.project.campagne;
 import fr.imie.project.CampagneEntity;
 
-import java.util.Date;
+
+
+import java.sql.Timestamp;
 
 /**
  * Created by fred on 17/05/17.
@@ -9,10 +11,10 @@ import java.util.Date;
 public class CampagneBO {
     private int id;
     private String nom;
-    private Date datefin;
+    private Timestamp datefin;
     private String nomconsclasse;
     private String trimconsclasse;
-    private Date dateconsclasse;
+    private Timestamp dateconsclasse;
     private String statut;
     private String urlcollective;
 
@@ -32,11 +34,11 @@ public class CampagneBO {
         this.nom = nom;
     }
 
-    public Date getDatefin() {
+    public Timestamp getDatefin() {
         return datefin;
     }
 
-    public void setDatefin(Date datefin) {
+    public void setDatefin(Timestamp datefin) {
         this.datefin = datefin;
     }
 
@@ -56,11 +58,11 @@ public class CampagneBO {
         this.trimconsclasse = trimconsclasse;
     }
 
-    public Date getDateconsclasse() {
+    public Timestamp getDateconsclasse() {
         return dateconsclasse;
     }
 
-    public void setDateconsclasse(Date dateconsclasse) {
+    public void setDateconsclasse(Timestamp dateconsclasse) {
         this.dateconsclasse = dateconsclasse;
     }
 
@@ -81,7 +83,6 @@ public class CampagneBO {
     }
 
     public static CampagneBO mapCampagneEntityToBO(CampagneEntity campagneEntity) {
-
         CampagneBO campagneBO = new CampagneBO();
         campagneBO.setId(campagneEntity.getId());
         campagneBO.setNom(campagneEntity.getNom());
@@ -95,11 +96,12 @@ public class CampagneBO {
     }
 
     public static CampagneEntity mapCampagneBOTOEntity(CampagneBO campagnebo) {
+
         CampagneEntity myBoToEntity = new CampagneEntity();
         myBoToEntity.setId(campagnebo.getId());
         myBoToEntity.setNom(campagnebo.getNom());
-        myBoToEntity.setDateconsclasse((java.sql.Date) campagnebo.getDateconsclasse());
-        myBoToEntity.setDatefin((java.sql.Date) campagnebo.getDatefin());
+        myBoToEntity.setDateconsclasse(campagnebo.getDateconsclasse());
+        myBoToEntity.setDatefin(campagnebo.getDatefin());
         myBoToEntity.setNomconsclasse(campagnebo.getNomconsclasse());
         myBoToEntity.setStatut(campagnebo.getStatut());
         myBoToEntity.setTrimconsclasse(campagnebo.getTrimconsclasse());
