@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b21e0276-05f2-4513-b24b-c8e2ff836dc8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java" afterPath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/business/target/classes/fr/imie/project/etablissement/EtablissementBO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/business/target/classes/fr/imie/project/etablissement/EtablissementEJB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/business/target/classes/fr/imie/project/etablissement/EtablissementLocal.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/target/classes/fr/imie/project/EtablissementEntity.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java" afterPath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java" afterPath="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java" afterPath="$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java" afterPath="$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/data/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java" afterPath="$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/tpdeploiement-web/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,11 +70,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CampagneRest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/src/main/java/fr/imie/project/CampagneRest.java">
+      <file leaf-file-name="EtablissementRest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="590">
+              <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EtablissementLocal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,45 +92,39 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EtablissementEJB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#842#859#0" expanded="true" />
+                <element signature="e#2084#2085#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2462#2474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EtablissementBO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="110" column="58" lean-forward="true" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CampagneBO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneBO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="-679">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#462#463#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#985#986#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1123#1124#0" expanded="true" />
-                <element signature="e#1175#1176#0" expanded="true" />
-                <element signature="e#1219#1220#0" expanded="true" />
-                <element signature="e#1256#1257#0" expanded="true" />
-                <element signature="e#1319#1320#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1477#1478#0" expanded="true" />
-                <element signature="e#1513#1514#0" expanded="true" />
-                <element signature="e#1553#1554#0" expanded="true" />
-                <element signature="e#1589#1590#0" expanded="true" />
-                <element signature="e#1647#1648#0" expanded="true" />
-                <element signature="e#1697#1698#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,14 +133,11 @@
       <file leaf-file-name="CampagneEJB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneEJB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#490#520#1" expanded="true" />
                 <element signature="e#699#711#0" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1822#1823#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,8 +146,30 @@
       <file leaf-file-name="CampagneLocal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneLocal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EtablissementEntity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="12" column="145" lean-forward="false" selection-start-line="12" selection-start-column="145" selection-end-line="12" selection-end-column="145" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClasseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/ClasseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -147,93 +178,11 @@
       <file leaf-file-name="CampagneEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="380">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
-                <element signature="e#1165#1166#0" expanded="true" />
-                <element signature="e#1203#1204#0" expanded="true" />
-                <element signature="e#1764#1765#0" expanded="true" />
-                <element signature="e#1801#1802#0" expanded="true" />
-                <marker date="1495099915144" expanded="false" signature="760:771" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="781:787" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="818:829" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="842:848" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="913:924" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="935:941" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="977:988" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1003:1009" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1289:1300" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1321:1327" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1383:1394" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1429:1435" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1522:1533" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1555:1561" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1619:1630" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1667:1673" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1863:1874" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="1911:1917" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="1988:1999" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="2013:2019" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="2061:2072" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="2093:2099" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="2184:2195" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="2216:2222" ph=" }" />
-                <marker date="1495099915144" expanded="false" signature="2278:2289" ph=" { " />
-                <marker date="1495099915144" expanded="false" signature="2324:2330" ph=" }" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtablissementEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EtablissementBO.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="110" column="58" lean-forward="true" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionnaireEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionnaireEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/src/main/resources/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -243,15 +192,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tomee.serializa</find>
-      <find>tomee.serializ</find>
       <find>tomee.seriali</find>
       <find>tomee.serial</find>
       <find>tomee.seria</find>
@@ -280,6 +227,8 @@
       <find>question</find>
       <find>etablissement</find>
       <find>Etablissement</find>
+      <find>Campagne</find>
+      <find>campagne</find>
     </findStrings>
     <replaceStrings>
       <replace>Intitule</replace>
@@ -294,6 +243,8 @@
       <replace>Question</replace>
       <replace>campagne</replace>
       <replace>Campagne</replace>
+      <replace>Classe</replace>
+      <replace>classe</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -331,9 +282,6 @@
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/questionnaire/QuestionnaireLocal.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/questionnaire/QuestionnaireBO.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionnaireEntity.java" />
-        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java" />
-        <option value="$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java" />
-        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java" />
         <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionEntity.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/question/QuestionBO.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/question/QuestionEJB.java" />
@@ -341,10 +289,17 @@
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneLocal.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneEJB.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneBO.java" />
-        <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java" />
         <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/ClasseEntity.java" />
+        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseEJB.java" />
+        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseBO.java" />
+        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseLocal.java" />
+        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java" />
+        <option value="$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java" />
+        <option value="$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java" />
+        <option value="$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java" />
       </list>
     </option>
   </component>
@@ -534,6 +489,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="business" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -639,6 +624,74 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="etablissement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fcpe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campagne" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1253,12 +1306,12 @@
       <workItem from="1494505055404" duration="5154000" />
       <workItem from="1494599389133" duration="1116000" />
       <workItem from="1494600548240" duration="27759000" />
-      <workItem from="1494923260425" duration="57630000" />
+      <workItem from="1494923260425" duration="70986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91659000" />
+    <option name="totallyTimeSpent" value="105015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1052" extended-state="6" />
@@ -1273,7 +1326,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1315,26 +1368,26 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3308351" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39933628" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32405347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32300884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.026726058" sideWeight="0.49573106" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2230523" sideWeight="0.20534459" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22376874" sideWeight="0.79465544" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.027654868" sideWeight="0.49573106" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33075222" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2230523" sideWeight="0.21568628" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2230523" sideWeight="0.78431374" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22376874" sideWeight="0.21215597" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4238227" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1362,36 +1415,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1504,55 +1527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/question/QuestionBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-          <folding>
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#886#887#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1590#1591#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1667#1668#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/question/QuestionEJB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1572,17 +1546,6 @@
             <element signature="e#0#2114#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#807#824#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#758#775#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1609,16 +1572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1684,67 +1637,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneLocal.java">
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/question/QuestionBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="1700">
+          <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneEJB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#490#520#1" expanded="true" />
-            <element signature="e#699#711#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#579#580#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#877#878#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1219#1220#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1553#1554#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1647#1648#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1753,58 +1650,8 @@
         <state relative-caret-position="440">
           <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-            <element signature="e#1203#1204#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-            <marker date="1495099915144" expanded="false" signature="760:771" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="781:787" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="818:829" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="842:848" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="913:924" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="935:941" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="977:988" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1003:1009" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1289:1300" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1321:1327" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1383:1394" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1429:1435" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1522:1533" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1555:1561" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1619:1630" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1667:1673" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1863:1874" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="1911:1917" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="1988:1999" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="2013:2019" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="2061:2072" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="2093:2099" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="2184:2195" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="2216:2222" ph=" }" />
-            <marker date="1495099915144" expanded="false" signature="2278:2289" ph=" { " />
-            <marker date="1495099915144" expanded="false" signature="2324:2330" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1816,18 +1663,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java">
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/QuestionEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        <state relative-caret-position="220">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseBO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-894">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="true" />
+            <element signature="e#563#564#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1289#1290#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseEJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#487#517#1" expanded="false" />
+            <element signature="e#684#694#0" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+            <element signature="e#1731#1732#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/classe/ClasseLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/src/main/java/fr/imie/project/EtablissementRest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="59" column="68" lean-forward="true" selection-start-line="59" selection-start-column="68" selection-end-line="59" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
+        <state relative-caret-position="543">
           <caret line="110" column="58" lean-forward="true" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/etablissement/EtablissementEJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#842#859#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2462#2474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneBO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneEJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#699#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/src/main/java/fr/imie/project/campagne/CampagneLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/ClasseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/CampagneEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/src/main/java/fr/imie/project/EtablissementEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="145" lean-forward="false" selection-start-line="12" selection-start-column="145" selection-end-line="12" selection-end-column="145" />
           <folding />
         </state>
       </provider>

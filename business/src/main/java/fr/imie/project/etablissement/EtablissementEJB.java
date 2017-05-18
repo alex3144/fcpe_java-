@@ -4,7 +4,10 @@ package fr.imie.project.etablissement;
  * Created by fred on 17/05/17.
  */
 
+import fr.imie.project.CampagneEntity;
 import fr.imie.project.EtablissementEntity;
+import fr.imie.project.campagne.CampagneBO;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -57,9 +60,19 @@ public class EtablissementEJB implements EtablissementLocal {
         return e;
     }
 
+
+
     @Override
     public void  createEtablissement(EtablissementBO e) {
         em.persist(EtablissementBO.mapEtablissementBOTOEntity(e));
     }
 
+
+    @Override
+    public List<CampagneBO> findAllCampagnes(EtablissementBO e) {
+        List<CampagneEntity> campagneEntity = em.createNamedQuery("Etablissement.findAllCampagnes", CampagneEntity.class).setParameter("id", e.getId()).getResultList();
+        List<CampagneBO> campagnesBO = new ArrayList<CampagneBO>();
+
+        return campagnesBO;
+    }
 }

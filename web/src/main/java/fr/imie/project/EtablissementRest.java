@@ -1,5 +1,7 @@
 package fr.imie.project;
 
+import fr.imie.project.campagne.CampagneBO;
+import fr.imie.project.campagne.CampagneLocal;
 import fr.imie.project.etablissement.EtablissementBO;
 import fr.imie.project.etablissement.EtablissementLocal;
 
@@ -50,6 +52,12 @@ public class EtablissementRest {
 		etablissementLocal.updateEtablissement(etablissement);
 		return Response.ok(etablissement).build();
 	}
-
+	@GET
+	@Path("/{id}/campagnes")
+	public List<CampagneBO> findAllCampagnes(@PathParam("id") Integer Idetablissement) {
+		EtablissementBO etablissementBO = new EtablissementBO();
+		etablissementBO.setId(Idetablissement);
+		return etablissementLocal.findAllCampagnes(etablissementBO);
+	}
 
 }

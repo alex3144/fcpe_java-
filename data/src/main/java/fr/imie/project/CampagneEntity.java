@@ -12,6 +12,7 @@ import java.sql.Timestamp;
         @NamedQuery(name = "Campagne.findAll", query = "SELECT c FROM CampagneEntity c"),
         @NamedQuery(name = "Campagne.findOne", query = "SELECT c FROM CampagneEntity c WHERE c.id =:id"),
 })
+
 @Table(name = "campagne", schema = "public", catalog = "fcpe")
 public class CampagneEntity {
     private int id;

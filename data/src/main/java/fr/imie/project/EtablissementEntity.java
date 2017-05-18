@@ -9,10 +9,15 @@ import javax.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "Etablissement.findAll", query = "SELECT e FROM EtablissementEntity e"),
         @NamedQuery(name = "Etablissement.findOne", query = "SELECT e FROM EtablissementEntity e WHERE e.id =:id"),
-        @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM EtablissementEntity e WHERE e.id = :id ")
+        //requete sql de toutes les campagnes d'un etablissement
+        @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM CampagneEntity c INNER JOIN EtablissementEntity e ON c.id = :id")
+
 })
 
 @Table(name = "etablissement", schema = "public", catalog = "fcpe")
+
+
+
 public class EtablissementEntity {
     private int id;
     private String nom;
