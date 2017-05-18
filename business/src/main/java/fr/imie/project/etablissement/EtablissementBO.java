@@ -94,6 +94,7 @@ public class EtablissementBO {
         etablissementBO.setNom(etablissementEntity.getNom());
         etablissementBO.setNumrue(etablissementEntity.getNumrue());
         etablissementBO.setNomrue(etablissementEntity.getNomrue());
+        etablissementBO.setVille(etablissementEntity.getVille());
         etablissementBO.setAcademie(etablissementEntity.getAcademie());
         etablissementBO.setCp(etablissementEntity.getCp());
         etablissementBO.setDepartement(etablissementEntity.getDepartement());
@@ -107,6 +108,7 @@ public class EtablissementBO {
         myBoToEntity.setNom(etablissementbo.getNom());
         myBoToEntity.setNumrue(etablissementbo.getNumrue());
         myBoToEntity.setNomrue(etablissementbo.getNomrue());
+        myBoToEntity.setVille(etablissementbo.getVille());
         myBoToEntity.setAcademie(etablissementbo.getAcademie());
         myBoToEntity.setCp(etablissementbo.getCp());
         myBoToEntity.setDepartement(etablissementbo.getDepartement());
