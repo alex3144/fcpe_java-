@@ -1,6 +1,7 @@
 package fr.imie.project;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by fred on 18/05/17.
@@ -11,6 +12,7 @@ import javax.persistence.*;
         @NamedQuery(name = "Classe.findOne", query = "SELECT c FROM ClasseEntity c WHERE c.id =:id"),
 })
 @Table(name = "classe", schema = "public", catalog = "fcpe")
+
 public class ClasseEntity {
     private int id;
     private String nom;
@@ -18,9 +20,11 @@ public class ClasseEntity {
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
+    private EtablissementEntity id_etablissement;
 
     @Id
     @Column(name = "id")
+
     public int getId() {
         return id;
     }
@@ -107,5 +111,15 @@ public class ClasseEntity {
         result = 31 * result + (niveauclasse != null ? niveauclasse.hashCode() : 0);
         result = 31 * result + (serieclasse != null ? serieclasse.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_etablissement", referencedColumnName = "id")
+    public EtablissementEntity getId_etablissement() {
+        return id_etablissement;
+    }
+
+    public void setId_etablissement(EtablissementEntity id_etablissement) {
+        this.id_etablissement = id_etablissement;
     }
 }

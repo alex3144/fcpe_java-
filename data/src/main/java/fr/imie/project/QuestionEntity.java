@@ -1,6 +1,7 @@
 package fr.imie.project;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by fred on 17/05/17.
@@ -11,8 +12,9 @@ import javax.persistence.*;
         @NamedQuery(name = "Question.findOne", query = "SELECT q FROM QuestionEntity q WHERE q.id =:id"),
 })
 @Table(name = "question", schema = "public", catalog = "fcpe")
+
 public class QuestionEntity {
-    private int id;
+
     private String intitule;
     private String type;
     private String choixreponse1;
@@ -23,8 +25,13 @@ public class QuestionEntity {
     private Boolean estactif;
     private Boolean estverrouille;
 
+
     @Id
-    @Column(name = "id")
+    private int id;
+    @JoinColumn(name = "id")
+    @OneToMany(mappedBy="question")
+    private List<QuestionEntity> questionnaires;
+
     public int getId() {
         return id;
     }

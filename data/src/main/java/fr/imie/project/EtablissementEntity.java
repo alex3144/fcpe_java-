@@ -1,6 +1,9 @@
 package fr.imie.project;
 
 import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
+
 
 /**
  * Created by fred on 17/05/17.
@@ -10,16 +13,18 @@ import javax.persistence.*;
         @NamedQuery(name = "Etablissement.findAll", query = "SELECT e FROM EtablissementEntity e"),
         @NamedQuery(name = "Etablissement.findOne", query = "SELECT e FROM EtablissementEntity e WHERE e.id =:id"),
         //requete sql de toutes les campagnes d'un etablissement
-        @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM CampagneEntity c INNER JOIN EtablissementEntity e ON c.id = :id")
+       //@NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT camp FROM CampagneEntity camp  INNER JOIN ClasseEntity cl ON id = cl.id INNER JOIN EtablissementEntity e ON id_etablissement = e.id WHERE e.id =:id")
+
+
+
 
 })
 
 @Table(name = "etablissement", schema = "public", catalog = "fcpe")
 
 
-
 public class EtablissementEntity {
-    private int id;
+    @Id
     private String nom;
     private String numrue;
     private String nomrue;
@@ -28,9 +33,13 @@ public class EtablissementEntity {
     private String departement;
     private String academie;
     private String typeetablissement;
+    private int id;
 
-    @Id
-    @Column(name = "id")
+
+    @OneToMany(fetch=FetchType.EAGER)
+    @JoinColumn(name = "id")
+    private List<ClasseEntity> classes;
+
     public int getId() {
         return id;
     }
@@ -153,4 +162,6 @@ public class EtablissementEntity {
         result = 31 * result + (typeetablissement != null ? typeetablissement.hashCode() : 0);
         return result;
     }
+
+
 }

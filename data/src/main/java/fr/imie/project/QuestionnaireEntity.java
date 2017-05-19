@@ -1,6 +1,7 @@
 package fr.imie.project;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by fred on 17/05/17.
@@ -12,14 +13,19 @@ import javax.persistence.*;
 
 })
 @Table(name = "questionnaire", schema = "public", catalog = "fcpe")
+
 public class QuestionnaireEntity {
-    private int id;
+
     private String nom;
     private Boolean estactif;
     private Boolean estverrouille;
 
+
     @Id
-    @Column(name = "id")
+    private int id;
+    @JoinColumn(name = "id")
+    @OneToMany(mappedBy="questionnaire")
+    List<QuestionnaireEntity> questions;
     public int getId() {
         return id;
     }
