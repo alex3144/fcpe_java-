@@ -26,10 +26,10 @@ public class QuestionEntity {
     private Boolean estverrouille;
 
 
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @JoinColumn(name = "id")
-    @OneToMany(mappedBy="question")
+    @OneToMany(fetch=FetchType.EAGER)
     private List<QuestionEntity> questionnaires;
 
     public int getId() {

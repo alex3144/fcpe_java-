@@ -1,37 +1,50 @@
 package fr.imie.project;
 
 import javax.persistence.*;
-import java.util.List;
+import java.io.Serializable;
 
 /**
- * Created by fred on 18/05/17.
+ * Created by fred on 22/05/17.
  */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Classe.findAll", query = "SELECT c FROM ClasseEntity c"),
-        @NamedQuery(name = "Classe.findOne", query = "SELECT c FROM ClasseEntity c WHERE c.id =:id"),
-})
+        @NamedQuery(name = "Classe.findAllClasse", query = "SELECT c FROM ClasseEntity c JOIN EtablissementEntity e ON e.id = c.id_etablissement WHERE e.id = :id"),
+        @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c JOIN EtablissementEntity e ON e.id = c.id_etablissement WHERE e.id = :idEtab AND c.id = :idClasse")
+        })
 @Table(name = "classe", schema = "public", catalog = "fcpe")
+public class ClasseEntity implements Serializable {
 
-public class ClasseEntity {
-    private int id;
     private String nom;
     private String nomprenomprofprincipal;
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
-    private EtablissementEntity id_etablissement;
+    private int id_etablissement;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-
+    private int id;
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
+
+
+    @ManyToOne
+    //@PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name = "id_etablissement", updatable = false, insertable = false)
+    private EtablissementEntity etablissement;
+    public int getId_etablissement() {
+        return id_etablissement;
+    }
+
+    public void setId_etablissement(int id_etablissement) {
+        this.id_etablissement = id_etablissement;
+    }
+
 
     @Basic
     @Column(name = "nom")
@@ -111,15 +124,5 @@ public class ClasseEntity {
         result = 31 * result + (niveauclasse != null ? niveauclasse.hashCode() : 0);
         result = 31 * result + (serieclasse != null ? serieclasse.hashCode() : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "id_etablissement", referencedColumnName = "id")
-    public EtablissementEntity getId_etablissement() {
-        return id_etablissement;
-    }
-
-    public void setId_etablissement(EtablissementEntity id_etablissement) {
-        this.id_etablissement = id_etablissement;
     }
 }

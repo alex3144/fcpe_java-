@@ -18,10 +18,12 @@ public class ConstituerEntity {
     @Column(name = "positionquestion")
     private int positionquestion;
     @ManyToOne
-    @PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
+    //@PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
+    @JoinColumn(name = "id", updatable = false, insertable = false)
     private QuestionEntity question;
     @ManyToOne
-    @PrimaryKeyJoinColumn(name = "id_questionnaire", referencedColumnName = "id")
+    //@PrimaryKeyJoinColumn(name = "id_questionnaire", referencedColumnName = "id")
+    @JoinColumn(name = "id_questionnaire", updatable = false, insertable = false)
     private QuestionnaireEntity questionnaire;
 }
 

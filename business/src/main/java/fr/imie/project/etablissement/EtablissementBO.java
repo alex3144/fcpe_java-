@@ -94,10 +94,10 @@ public class EtablissementBO {
         etablissementBO.setNom(etablissementEntity.getNom());
         etablissementBO.setNumrue(etablissementEntity.getNumrue());
         etablissementBO.setNomrue(etablissementEntity.getNomrue());
-        etablissementBO.setVille(etablissementEntity.getVille());
-        etablissementBO.setAcademie(etablissementEntity.getAcademie());
         etablissementBO.setCp(etablissementEntity.getCp());
+        etablissementBO.setVille(etablissementEntity.getVille());
         etablissementBO.setDepartement(etablissementEntity.getDepartement());
+        etablissementBO.setAcademie(etablissementEntity.getAcademie());
         etablissementBO.setTypeetablissement(etablissementEntity.getTypeetablissement());
         return etablissementBO;
     }
@@ -108,10 +108,10 @@ public class EtablissementBO {
         myBoToEntity.setNom(etablissementbo.getNom());
         myBoToEntity.setNumrue(etablissementbo.getNumrue());
         myBoToEntity.setNomrue(etablissementbo.getNomrue());
-        myBoToEntity.setVille(etablissementbo.getVille());
-        myBoToEntity.setAcademie(etablissementbo.getAcademie());
         myBoToEntity.setCp(etablissementbo.getCp());
+        myBoToEntity.setVille(etablissementbo.getVille());
         myBoToEntity.setDepartement(etablissementbo.getDepartement());
+        myBoToEntity.setAcademie(etablissementbo.getAcademie());
         myBoToEntity.setTypeetablissement(etablissementbo.getTypeetablissement());
         return myBoToEntity;
     }

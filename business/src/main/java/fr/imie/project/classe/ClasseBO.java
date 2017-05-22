@@ -1,16 +1,26 @@
 package fr.imie.project.classe;
 import fr.imie.project.ClasseEntity;
+import fr.imie.project.EtablissementEntity;
+
 /**
- * Created by fred on 18/05/17.
+ * Created by fred on 22/05/17.
  */
 public class ClasseBO {
-
     private int id;
     private String nom;
     private String nomprenomprofprincipal;
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
+    private int  id_etablissement;
+
+    public int getId_etablissement() {
+        return id_etablissement;
+    }
+
+    public void setId_etablissement(int id_etablissement) {
+        this.id_etablissement = id_etablissement;
+    }
 
     public int getId() {
         return id;
@@ -67,7 +77,8 @@ public class ClasseBO {
         classeBO.setNomprenomparentdelegue(classeEntity.getNomprenomparentdelegue());
         classeBO.setNiveauclasse(classeEntity.getNiveauclasse());
         classeBO.setSerieclasse(classeEntity.getSerieclasse());
-
+        classeBO.setId_etablissement(classeEntity.getId_etablissement());
+        
         return classeBO;
     }
 
@@ -80,7 +91,8 @@ public class ClasseBO {
         myBoToEntity.setNomprenomparentdelegue(classebo.getNomprenomparentdelegue());
         myBoToEntity.setNiveauclasse(classebo.getNiveauclasse());
         myBoToEntity.setSerieclasse(classebo.getSerieclasse());
-
+        myBoToEntity.setId_etablissement(classebo.getId_etablissement());
+       
         return myBoToEntity;
     }
 }

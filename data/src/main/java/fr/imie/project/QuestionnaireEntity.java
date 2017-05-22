@@ -21,11 +21,17 @@ public class QuestionnaireEntity {
     private Boolean estverrouille;
 
 
-    @Id
+
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @JoinColumn(name = "id")
-    @OneToMany(mappedBy="questionnaire")
+    @OneToMany(fetch=FetchType.EAGER)
     List<QuestionnaireEntity> questions;
+    @JoinColumn(name = "id")
+    @OneToMany(fetch=FetchType.EAGER)
+    List<CampagneEntity> campagnes;
+
+
     public int getId() {
         return id;
     }

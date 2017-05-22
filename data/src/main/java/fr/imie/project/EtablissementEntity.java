@@ -13,8 +13,8 @@ import java.util.List;
         @NamedQuery(name = "Etablissement.findAll", query = "SELECT e FROM EtablissementEntity e"),
         @NamedQuery(name = "Etablissement.findOne", query = "SELECT e FROM EtablissementEntity e WHERE e.id =:id"),
         //requete sql de toutes les campagnes d'un etablissement
-       //@NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT camp FROM CampagneEntity camp  INNER JOIN ClasseEntity cl ON id = cl.id INNER JOIN EtablissementEntity e ON id_etablissement = e.id WHERE e.id =:id")
-
+       @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT camp FROM CampagneEntity camp  INNER JOIN ClasseEntity cl ON camp.id = cl.id INNER JOIN EtablissementEntity e ON e.id = cl.id WHERE e.id =:id")
+        //@NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT camp FROM CampagneEntity camp  INNER JOIN ClasseEntity cl ON camp.id_classe = cl.id INNER JOIN EtablissementEntity e ON e.id = cl.id_etablissement WHERE e.id =:id")
 
 
 
@@ -24,7 +24,7 @@ import java.util.List;
 
 
 public class EtablissementEntity {
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private String nom;
     private String numrue;
     private String nomrue;
@@ -38,7 +38,7 @@ public class EtablissementEntity {
 
     @OneToMany(fetch=FetchType.EAGER)
     @JoinColumn(name = "id")
-    private List<ClasseEntity> classes;
+    private List<ClasseEntity> classe;
 
     public int getId() {
         return id;

@@ -1,8 +1,8 @@
 package fr.imie.project;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * Created by fred on 17/05/17.
@@ -23,8 +23,10 @@ public class CampagneEntity {
     private Timestamp dateconsclasse;
     private String statut;
     private String urlcollective;
+    private List<ClasseEntity> classes;
+    private List<QuestionnaireEntity> questionnaires;
 
-    @Id
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
     public int getId() {
         return id;
@@ -33,6 +35,28 @@ public class CampagneEntity {
     public void setId(int id) {
         this.id = id;
     }
+
+    public List<ClasseEntity> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<ClasseEntity> classes) {
+        this.classes = classes;
+    }
+
+    public List<QuestionnaireEntity> getQuestionnaires() {
+        return questionnaires;
+    }
+
+    public void setQuestionnaires(List<QuestionnaireEntity> questionnaires) {
+        this.questionnaires = questionnaires;
+    }
+
+    @OneToMany(fetch=FetchType.EAGER)
+            @JoinColumns(value = {
+            @JoinColumn(name="id_classe", referencedColumnName = "id"),
+            @JoinColumn(name="id_questionnaire", referencedColumnName = "id")
+    })
 
     @Basic
     @Column(name = "nom")
