@@ -103,16 +103,12 @@ public class EtablissementEJB implements EtablissementLocal {
 
 
     @Override
-    public ClasseBO deleteClasse(ClasseBO classe) {
-        if(classe != null) {
-            ClasseEntity finalC = ClasseBO.mapClasseBOTOEntity(classe);
-            ClasseEntity finalC2 = em.merge(finalC);
-            em.remove(finalC2);
-            return classe;
-        }else{
-            return classe;
+    public void deleteClasse(Integer Idetablissement, Integer ClasseId)  {
+            ClasseEntity entityC = (ClasseEntity) em.createNamedQuery("Classe.findOneClasse",  ClasseEntity.class).setParameter("idEtab", Idetablissement).setParameter("idClasse", ClasseId).getSingleResult();
+            em.remove(entityC);
         }
-    }
+
+
     @Override
     public ClasseBO updateClasse(Integer Idetablissement, Integer ClasseId) {
         ClasseBO c = new ClasseBO();

@@ -1,7 +1,6 @@
 package fr.imie.project.etablissement;
 import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.classe.ClasseBO;
-
 import java.util.List;
 
 /**
@@ -30,7 +29,7 @@ public interface EtablissementLocal {
 
     public void createClasse(Integer Idetablissement, ClasseBO classe);
 
-    public ClasseBO deleteClasse(ClasseBO classe);
+    public void deleteClasse(Integer Idetablissement, Integer idclasse);
 
     public ClasseBO updateClasse(Integer Idetablissement, Integer idclasse);
 

@@ -8,10 +8,11 @@ import java.io.Serializable;
  */
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "Classe.findAllClasse", query = "SELECT c FROM ClasseEntity c JOIN EtablissementEntity e ON e.id = c.id_etablissement WHERE e.id = :id"),
-        @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c JOIN EtablissementEntity e ON e.id = c.id_etablissement WHERE e.id = :idEtab AND c.id = :idClasse")
+        @NamedQuery(name = "Classe.findAllClasse", query = "SELECT c FROM EtablissementEntity e JOIN e.classes c WHERE c.etablissement.id = :id"),
+        @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c INNER JOIN EtablissementEntity e  WHERE e.id = :idEtab AND c.id = :idClasse")
         })
 @Table(name = "classe", schema = "public", catalog = "fcpe")
+
 public class ClasseEntity implements Serializable {
 
     private String nom;
@@ -19,7 +20,8 @@ public class ClasseEntity implements Serializable {
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
-    private int id_etablissement;
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,13 +39,16 @@ public class ClasseEntity implements Serializable {
     //@PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
     @JoinColumn(name = "id_etablissement", updatable = false, insertable = false)
     private EtablissementEntity etablissement;
-    public int getId_etablissement() {
-        return id_etablissement;
+
+    public EtablissementEntity getEtablissement() {
+        return etablissement;
     }
 
-    public void setId_etablissement(int id_etablissement) {
-        this.id_etablissement = id_etablissement;
+    public void setEtablissement(EtablissementEntity etablissement) {
+        this.etablissement = etablissement;
     }
+
+
 
 
     @Basic

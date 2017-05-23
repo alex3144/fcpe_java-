@@ -1,6 +1,7 @@
 package fr.imie.project.classe;
 import fr.imie.project.ClasseEntity;
 import fr.imie.project.EtablissementEntity;
+import fr.imie.project.etablissement.EtablissementBO;
 
 /**
  * Created by fred on 22/05/17.
@@ -12,14 +13,14 @@ public class ClasseBO {
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
-    private int  id_etablissement;
+    private EtablissementBO etablissement;
 
-    public int getId_etablissement() {
-        return id_etablissement;
+    public EtablissementBO getEtablissement() {
+        return etablissement;
     }
 
-    public void setId_etablissement(int id_etablissement) {
-        this.id_etablissement = id_etablissement;
+    public void setEtablissement(EtablissementBO etablissement) {
+        this.etablissement = etablissement;
     }
 
     public int getId() {
@@ -77,8 +78,8 @@ public class ClasseBO {
         classeBO.setNomprenomparentdelegue(classeEntity.getNomprenomparentdelegue());
         classeBO.setNiveauclasse(classeEntity.getNiveauclasse());
         classeBO.setSerieclasse(classeEntity.getSerieclasse());
-        classeBO.setId_etablissement(classeEntity.getId_etablissement());
-        
+        EtablissementBO e = EtablissementBO.mapEtablissementEntityToBO(classeEntity.getEtablissement());
+        classeBO.setEtablissement(e);
         return classeBO;
     }
 
@@ -91,8 +92,8 @@ public class ClasseBO {
         myBoToEntity.setNomprenomparentdelegue(classebo.getNomprenomparentdelegue());
         myBoToEntity.setNiveauclasse(classebo.getNiveauclasse());
         myBoToEntity.setSerieclasse(classebo.getSerieclasse());
-        myBoToEntity.setId_etablissement(classebo.getId_etablissement());
-       
+        EtablissementEntity e = EtablissementBO.mapEtablissementBOTOEntity(classebo.getEtablissement());
+        myBoToEntity.setEtablissement(e);
         return myBoToEntity;
     }
 }

@@ -6,14 +6,13 @@ import fr.imie.project.etablissement.EtablissementLocal;
 import fr.imie.project.classe.ClasseBO;
 
 import javax.ejb.EJB;
-import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+
 @Path("/etablissements")
-@Stateless
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class EtablissementRest {
@@ -85,10 +84,10 @@ public class EtablissementRest {
 		return Response.ok(classe).build();
 	}
 	@DELETE
-	@Path("/{idetab}/classe/{idclass}/delete")
-	public Response deleteClasse(ClasseBO classe) {
-		etablissementLocal.deleteClasse(classe);
-		return Response.ok(classe).build();
+	@Path("/{idetab}/classe/{idclasse}/delete")
+	public Response deleteClasse(@PathParam("idetab") Integer Idetablissement, @PathParam("idclasse") Integer idclasse) {
+		etablissementLocal.deleteClasse(Idetablissement, idclasse);
+		return Response.ok(Idetablissement).build();
 	}
 	@PUT
 	@Path("/{idetab}/classe/{idclasse}/update")
