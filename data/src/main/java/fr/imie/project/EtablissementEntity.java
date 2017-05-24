@@ -29,6 +29,13 @@ import static javax.persistence.CascadeType.ALL;
 public class EtablissementEntity {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     private String nom;
     private String numrue;
@@ -41,17 +48,10 @@ public class EtablissementEntity {
 
 
 
-    @OneToMany(fetch=FetchType.EAGER)
-    @JoinColumn(name = "id")
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    @JoinColumn(name="id")
     private List<ClasseEntity> classes;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "nom")

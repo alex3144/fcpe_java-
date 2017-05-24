@@ -2,15 +2,16 @@ package fr.imie.project;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by fred on 22/05/17.
  */
 @Entity
-@NamedQueries({
+@NamedQueries(value = {
         @NamedQuery(name = "Classe.findAllClasse", query = "SELECT c FROM EtablissementEntity e JOIN e.classes c WHERE c.etablissement.id = :id"),
         @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c INNER JOIN EtablissementEntity e  WHERE e.id = :idEtab AND c.id = :idClasse")
-        })
+})
 @Table(name = "classe", schema = "public", catalog = "fcpe")
 
 public class ClasseEntity implements Serializable {
@@ -36,8 +37,7 @@ public class ClasseEntity implements Serializable {
 
 
     @ManyToOne
-    //@PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
-    @JoinColumn(name = "id_etablissement", updatable = false, insertable = false)
+    @JoinColumn(name="id_etablissement", updatable = false,insertable = false)
     private EtablissementEntity etablissement;
 
     public EtablissementEntity getEtablissement() {
@@ -47,7 +47,9 @@ public class ClasseEntity implements Serializable {
     public void setEtablissement(EtablissementEntity etablissement) {
         this.etablissement = etablissement;
     }
-
+    @JoinColumn(name = "id")
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    List<CampagneEntity> campagnes;
 
 
 

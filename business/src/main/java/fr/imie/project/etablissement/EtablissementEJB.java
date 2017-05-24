@@ -9,7 +9,6 @@ import fr.imie.project.ClasseEntity;
 import fr.imie.project.EtablissementEntity;
 import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.classe.ClasseBO;
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -105,6 +104,7 @@ public class EtablissementEJB implements EtablissementLocal {
     @Override
     public void deleteClasse(Integer Idetablissement, Integer ClasseId)  {
             ClasseEntity entityC = (ClasseEntity) em.createNamedQuery("Classe.findOneClasse",  ClasseEntity.class).setParameter("idEtab", Idetablissement).setParameter("idClasse", ClasseId).getSingleResult();
+            em.merge(entityC);
             em.remove(entityC);
         }
 

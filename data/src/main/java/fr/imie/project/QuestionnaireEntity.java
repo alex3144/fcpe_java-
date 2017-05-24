@@ -25,10 +25,10 @@ public class QuestionnaireEntity {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @JoinColumn(name = "id")
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
     List<QuestionnaireEntity> questions;
     @JoinColumn(name = "id")
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
     List<CampagneEntity> campagnes;
 
 

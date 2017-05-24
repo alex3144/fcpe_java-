@@ -53,7 +53,7 @@ public class CampagneEntity {
     }
 
     @OneToMany(fetch=FetchType.EAGER)
-            @JoinColumns(value = {
+    @JoinColumns(value = {
             @JoinColumn(name="id_classe", referencedColumnName = "id"),
             @JoinColumn(name="id_questionnaire", referencedColumnName = "id")
     })
