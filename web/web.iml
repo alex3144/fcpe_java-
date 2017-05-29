@@ -32,6 +32,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.sun.mail:javax.mail:1.5.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="module" module-name="business" />
-    <orderEntry type="module" module-name="data" />
+    <orderEntry type="library" name="Maven: fr.imie.project:data:0.0.1-SNAPSHOT" level="project" />
   </component>
 </module>

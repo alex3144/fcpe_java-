@@ -43,7 +43,11 @@
 				<version>7.0</version>
 				<scope>provided</scope>
 			</dependency>
-
+			<dependency>
+				<groupId>com.mailjet</groupId>
+				<artifactId>mailjet-client</artifactId>
+				<version>4.0.5</version>
+			</dependency>
 			<dependency>
 				<groupId>org.eclipse.persistence</groupId>
 				<artifactId>org.eclipse.persistence.jpa</artifactId>

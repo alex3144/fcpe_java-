@@ -17,10 +17,9 @@ import static javax.persistence.CascadeType.ALL;
         //requete sql de toutes les campagnes d'un etablissement
         @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM CampagneEntity c JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass"),
         @NamedQuery(name = "Etablissement.findOneCampagnes", query = " SELECT c FROM CampagneEntity c JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp"),
-        @NamedQuery(name = "Etablissement.findQuestionnaire", query = "SELECT qe FROM CampagneEntity c JOIN c.questionnaire qe JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp ")
-
-
-
+        @NamedQuery(name = "Etablissement.findQuestionnaire", query = "SELECT qe FROM CampagneEntity c JOIN c.questionnaire qe JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp "),
+        @NamedQuery(name = "Etablissement.findQuestions", query="SELECT qn FROM CampagneEntity c JOIN c.questionnaire qe JOIN qe.questions qn JOIN c.classe cl JOIN cl.etablissement e WHERE e.id= :idEtab AND cl.id = :idClass AND c.id = :idCamp"),
+        @NamedQuery(name = "Etablissement.findQuestion", query="SELECT qn FROM CampagneEntity c JOIN c.questionnaire qe JOIN qe.questions qn JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp AND qn.id  = :idqn")
 })
 
 @Table(name = "etablissement", schema = "public", catalog = "fcpe")

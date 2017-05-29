@@ -1,6 +1,7 @@
 package fr.imie.project.etablissement;
 import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.classe.ClasseBO;
+import fr.imie.project.question.QuestionBO;
 import fr.imie.project.questionnaire.QuestionnaireBO;
 
 import java.util.List;
@@ -29,7 +30,11 @@ public interface EtablissementLocal {
 
     public QuestionnaireBO findQuestionnaire(Integer Idetablissement, Integer idclasse, Integer idcampagne);
 
-    /*GERE QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
+    /*GERER QUESTION D'UN QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
+
+    public List<QuestionBO> findAllQuestion(Integer Idetablissement, Integer idclasse, Integer idcampagne);
+
+    public QuestionBO findOneQuestion(Integer Idetablissement, Integer idclasse, Integer idcampagne, Integer idquestion);
 
     /* GESTION DES CLASSES */
 

@@ -4,12 +4,10 @@ package fr.imie.project.etablissement;
  * Created by fred on 17/05/17.
  */
 
-import fr.imie.project.CampagneEntity;
-import fr.imie.project.ClasseEntity;
-import fr.imie.project.EtablissementEntity;
-import fr.imie.project.QuestionnaireEntity;
+import fr.imie.project.*;
 import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.classe.ClasseBO;
+import fr.imie.project.question.QuestionBO;
 import fr.imie.project.questionnaire.QuestionnaireBO;
 
 import java.util.ArrayList;
@@ -99,6 +97,29 @@ public class EtablissementEJB implements EtablissementLocal {
         QuestionnaireBO questionnaireBO = QuestionnaireBO.mapQuestionnaireEntityToBO(questionnaireEntity);
         return questionnaireBO;
     }
+
+    /*GERER QUESTION D'UN QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
+
+    @Override
+    public List<QuestionBO> findAllQuestion(Integer Idetablissement, Integer idclasse, Integer idcampagne) {
+        @SuppressWarnings("unchecked")
+        List<QuestionEntity> questionsEntity =  em.createNamedQuery("Etablissement.findQuestions", QuestionEntity.class).setParameter("idClass", idclasse).setParameter("idEtab", Idetablissement).setParameter("idCamp", idcampagne).getResultList();
+        List<QuestionBO> questionsBO = new ArrayList<QuestionBO>();
+
+        for(QuestionEntity questionentity : questionsEntity){
+            questionsBO.add(QuestionBO.mapQuestionEntityToBO(questionentity));
+        }
+        return questionsBO;
+    }
+
+    @Override
+    public QuestionBO findOneQuestion(Integer Idetablissement, Integer idclasse, Integer idcampagne, Integer idquestion){
+        QuestionEntity questionEntity = (QuestionEntity) em.createNamedQuery("Etablissement.findQuestion", QuestionEntity.class).setParameter("idClass", idclasse).setParameter("idEtab", Idetablissement).setParameter("idCamp", idcampagne).setParameter("idqn", idcampagne).getSingleResult();
+        QuestionBO questionsBO = QuestionBO.mapQuestionEntityToBO(questionEntity);
+        return questionsBO;
+    }
+
+
 
     /*GESTION DES CLASSES */
 
