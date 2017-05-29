@@ -15,7 +15,7 @@ import java.util.List;
 
 @Table(name = "campagne", schema = "public", catalog = "fcpe")
 public class CampagneEntity {
-    private int id;
+
     private String nom;
     private Timestamp datefin;
     private String nomconsclasse;
@@ -23,11 +23,12 @@ public class CampagneEntity {
     private Timestamp dateconsclasse;
     private String statut;
     private String urlcollective;
-    private List<ClasseEntity> classes;
-    private List<QuestionnaireEntity> questionnaires;
+
+
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "id")
+    private int id;
     public int getId() {
         return id;
     }
@@ -36,27 +37,29 @@ public class CampagneEntity {
         this.id = id;
     }
 
-    public List<ClasseEntity> getClasses() {
-        return classes;
+    public ClasseEntity getClasses() {
+        return classe;
     }
 
-    public void setClasses(List<ClasseEntity> classes) {
-        this.classes = classes;
+    public void setClasses(ClasseEntity classes) {
+        this.classe = classes;
     }
 
-    public List<QuestionnaireEntity> getQuestionnaires() {
-        return questionnaires;
+    public QuestionnaireEntity getQuestionnaires() {
+        return questionnaire;
     }
 
-    public void setQuestionnaires(List<QuestionnaireEntity> questionnaires) {
-        this.questionnaires = questionnaires;
+    public void setQuestionnaires(QuestionnaireEntity questionnaire) {
+        this.questionnaire = questionnaire;
     }
 
-    @OneToMany(fetch=FetchType.EAGER)
-    @JoinColumns(value = {
-            @JoinColumn(name="id_classe", referencedColumnName = "id"),
-            @JoinColumn(name="id_questionnaire", referencedColumnName = "id")
-    })
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name="id_classe", referencedColumnName="id")
+    private ClasseEntity classe;
+    @ManyToOne
+    @PrimaryKeyJoinColumn(name="id_questionnaire", referencedColumnName="id")
+    private QuestionnaireEntity questionnaire;
+
 
     @Basic
     @Column(name = "nom")

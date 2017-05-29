@@ -24,20 +24,49 @@ public class QuestionnaireEntity {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    @JoinColumn(name = "id")
-    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
-    List<QuestionnaireEntity> questions;
-    @JoinColumn(name = "id")
-    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
-    List<CampagneEntity> campagnes;
-
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @JoinColumn(name = "id")
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    List<QuestionEntity> questions;
+
+    public List<QuestionEntity> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(List<QuestionEntity> questions) {
+        this.questions = questions;
+    }
+
+    @JoinColumn(name = "id")
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    private List<CampagneEntity> campagnes;
+
+    public List<CampagneEntity> getCampagnes() {
+        return campagnes;
+    }
+
+    public void setCampagnes(List<CampagneEntity> campagnes) {
+        this.campagnes = campagnes;
+    }
+
+
+    @ManyToOne
+    @JoinColumn(name="id_etablissement", updatable = false,insertable = false)
+    private EtablissementEntity etablissement;
+
+    public EtablissementEntity getEtablissement() {
+        return etablissement;
+    }
+
+    public void setEtablissement(EtablissementEntity etablissement) {
+        this.etablissement = etablissement;
     }
 
     @Basic

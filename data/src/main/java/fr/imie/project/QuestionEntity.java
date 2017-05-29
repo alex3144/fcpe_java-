@@ -28,10 +28,6 @@ public class QuestionEntity {
 
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
-    @JoinColumn(name = "id")
-    @OneToMany(fetch=FetchType.EAGER)
-    private List<QuestionEntity> questionnaires;
-
     public int getId() {
         return id;
     }
@@ -39,6 +35,24 @@ public class QuestionEntity {
     public void setId(int id) {
         this.id = id;
     }
+
+    @JoinColumn(name = "id")
+    @OneToMany(fetch=FetchType.EAGER)
+    private List<QuestionnaireEntity> questionnaires;
+
+
+    @ManyToOne
+    @JoinColumn(name="id_etablissement", updatable = false,insertable = false)
+    private EtablissementEntity etablissement;
+
+    public EtablissementEntity getEtablissement() {
+        return etablissement;
+    }
+
+    public void setEtablissement(EtablissementEntity etablissement) {
+        this.etablissement = etablissement;
+    }
+
 
     @Basic
     @Column(name = "intitule")

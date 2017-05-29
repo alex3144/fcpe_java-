@@ -52,6 +52,10 @@ public class EtablissementEntity {
     @JoinColumn(name="id")
     private List<ClasseEntity> classes;
 
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    @JoinColumn(name="id")
+    private List<QuestionnaireEntity> questionnaire;
+
 
     @Basic
     @Column(name = "nom")
