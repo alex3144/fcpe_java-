@@ -18,6 +18,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.mailjet</groupId>
+            <artifactId>mailjet-client</artifactId>
+            <version>4.0.5</version>
+        </dependency>
+        <dependency>
             <groupId>javax.ejb</groupId>
             <artifactId>ejb-api</artifactId>
             <version>3.0</version>

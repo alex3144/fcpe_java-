@@ -15,7 +15,6 @@
 			<artifactId>javaee-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>fr.imie.project</groupId>
 			<artifactId>business</artifactId>

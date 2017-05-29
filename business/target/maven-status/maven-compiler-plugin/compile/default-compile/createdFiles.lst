@@ -1,2 +1,14 @@
-fr\imie\project\QuestionEJB.class
-fr\imie\project\QuestionLocal.class
+fr/imie/project/campagne/CampagneEJB.class
+fr/imie/project/questionnaire/QuestionnaireLocal.class
+fr/imie/project/classe/ClasseBO.class
+fr/imie/project/etablissement/EtablissementLocal.class
+fr/imie/project/campagne/CampagneLocal.class
+fr/imie/project/question/QuestionBO.class
+fr/imie/project/etablissement/EtablissementBO.class
+fr/imie/project/emailSAAS/mailjetAPI.class
+fr/imie/project/questionnaire/QuestionnaireBO.class
+fr/imie/project/etablissement/EtablissementEJB.class
+fr/imie/project/questionnaire/QuestionnaireEJB.class
+fr/imie/project/question/QuestionEJB.class
+fr/imie/project/campagne/CampagneBO.class
+fr/imie/project/question/QuestionLocal.class

@@ -1,1 +1,4 @@
-fr\imie\project\UserServlet.class
+fr/imie/project/QuestionRest.class
+fr/imie/project/EtablissementRest.class
+fr/imie/project/CampagneRest.class
+fr/imie/project/QuestionnaireRest.class

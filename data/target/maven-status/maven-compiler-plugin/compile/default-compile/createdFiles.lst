@@ -1,1 +1,7 @@
-fr\imie\project\Question.class
+fr/imie/project/ConstituerEntity.class
+fr/imie/project/QuestionEntity.class
+fr/imie/project/CampagneEntity.class
+fr/imie/project/ConstituerEntityId.class
+fr/imie/project/EtablissementEntity.class
+fr/imie/project/ClasseEntity.class
+fr/imie/project/QuestionnaireEntity.class
