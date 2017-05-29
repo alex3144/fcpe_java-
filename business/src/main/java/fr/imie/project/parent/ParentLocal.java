@@ -1,5 +1,8 @@
 package fr.imie.project.parent;
 
+import com.mailjet.client.errors.MailjetException;
+import com.mailjet.client.errors.MailjetSocketTimeoutException;
+import fr.imie.project.campagne.CampagneBO;
 import javafx.scene.Parent;
 
 import java.util.List;
@@ -11,6 +14,6 @@ import javax.ejb.Local;
 @Local
 public interface ParentLocal {
 
-    public List<ParentBO> DisplayEmails(Integer idclasse);
+    public CampagneBO DisplayEmails(Integer idclasse, Integer idcampagne) throws MailjetSocketTimeoutException, MailjetException;
 
 }

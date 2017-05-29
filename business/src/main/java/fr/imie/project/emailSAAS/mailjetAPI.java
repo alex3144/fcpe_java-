@@ -9,6 +9,7 @@ import com.mailjet.client.resource.Contact;
 import com.mailjet.client.resource.Email;
 import fr.imie.project.ParentEntity;
 import fr.imie.project.campagne.CampagneBO;
+import fr.imie.project.parent.ParentBO;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -21,29 +22,27 @@ import java.util.List;
 
 public class mailjetAPI {
 
-    MailjetClient client = new MailjetClient(System.getenv("c8dac4f06293b116e44b43653ef8f823"), System.getenv("c6873cb7acade767778ea21cb5c4d91f"));
-    MailjetRequest contacts;
-    MailjetRequest email;
-    JSONArray recipients;
-    MailjetResponse response;
+        public static void sendMail(List<ParentBO> contacts, CampagneBO camp) throws MailjetException, MailjetSocketTimeoutException {
+            MailjetClient client;
+            client = new MailjetClient("c8dac4f06293b116e44b43653ef8f823", "c6873cb7acade767778ea21cb5c4d91f");
+            MailjetResponse response;
+            MailjetRequest request;
+            JSONArray recipients = new JSONArray();
 
-    public void sendMail(List<ParentEntity> contacts, CampagneBO camp) throws MailjetSocketTimeoutException, MailjetException {
+            for (ParentBO parentBO : contacts){
+                recipients.put(new JSONObject().put(Contact.EMAIL, parentBO.getEmail()));
+            }
 
+            request = new MailjetRequest(Email.resource)
+                    .property(Email.RECIPIENTS, recipients)
+                    .property(Email.FROMEMAIL, "alexboceno@hotmail.fr")
+                    .property(Email.FROMNAME, "Votre etablissement")
+                    .property(Email.SUBJECT, "Campagne trimestriel")
+                    .property(Email.TEXTPART, "Voici votre questionnaire trimestriel en lien ci dessous" + " " + camp.getUrlcollective());
 
-        recipients = new JSONArray()
-                .put(new JSONObject().put(Contact.EMAIL, "roger@mailjet.com"))
-                .put(new JSONObject().put(Contact.EMAIL, "stan@mailjet.com"))
-                .put(new JSONObject().put(Contact.EMAIL, "francine@mailjet.com"));
+            response = client.post(request);
+            System.out.println(response.getData());
+        }
 
-        email = new MailjetRequest(Email.resource)
-                .property(Email.FROMNAME, "Votre Etablissement scolaire")
-                .property(Email.FROMEMAIL, "campagneFCPE@noreply.fr")
-                .property(Email.SUBJECT, "Voici votre questionnaire trimestriel en lien ci dessous" + camp.getUrlcollective())
-                .property(Email.RECIPIENTS, recipients)
-                .property(Email.MJCUSTOMID, "fcpe");
+};
 
-        response = client.post(email);
-    }
-
-
-}
