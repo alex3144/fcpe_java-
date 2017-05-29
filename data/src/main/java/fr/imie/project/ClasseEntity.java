@@ -10,20 +10,20 @@ import java.util.List;
 @Entity
 @NamedQueries(value = {
         @NamedQuery(name = "Classe.findAllClasse", query = "SELECT c FROM EtablissementEntity e JOIN e.classes c WHERE c.etablissement.id = :id"),
-        @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c INNER JOIN EtablissementEntity e  WHERE e.id = :idEtab AND c.id = :idClasse")
+        @NamedQuery(name = "Classe.findOneClasse", query = "SELECT c FROM ClasseEntity c INNER JOIN EtablissementEntity e  WHERE e.id = :idEtab AND c.id = :idClasse"),
 })
 @Table(name = "classe", schema = "public", catalog = "fcpe")
 
 public class ClasseEntity implements Serializable {
 
+    @JoinColumn(name = "id")
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    List<CampagneEntity> campagnes;
     private String nom;
     private String nomprenomprofprincipal;
     private String nomprenomparentdelegue;
     private String niveauclasse;
     private String serieclasse;
-
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -31,15 +31,13 @@ public class ClasseEntity implements Serializable {
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-
-
     @ManyToOne
     @JoinColumn(name="id_etablissement", updatable = false,insertable = false)
     private EtablissementEntity etablissement;
-
     public EtablissementEntity getEtablissement() {
         return etablissement;
     }
@@ -47,10 +45,18 @@ public class ClasseEntity implements Serializable {
     public void setEtablissement(EtablissementEntity etablissement) {
         this.etablissement = etablissement;
     }
-    @JoinColumn(name = "id")
-    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
-    List<CampagneEntity> campagnes;
 
+
+    @OneToMany(mappedBy = "id_classe")
+    List<EleveEntity> eleves;
+
+    public List<EleveEntity> getEleves() {
+        return eleves;
+    }
+
+    public void setEleves(List<EleveEntity> eleves) {
+        this.eleves = eleves;
+    }
 
 
     @Basic

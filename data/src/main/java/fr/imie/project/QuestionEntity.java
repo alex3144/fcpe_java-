@@ -42,7 +42,7 @@ public class QuestionEntity {
 
 
     @ManyToOne
-    @JoinColumn(name="id_etablissement", updatable = false,insertable = false)
+    @PrimaryKeyJoinColumn(name="id_etablissement", referencedColumnName="id")
     private EtablissementEntity etablissement;
 
     public EtablissementEntity getEtablissement() {

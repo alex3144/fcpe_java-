@@ -2,12 +2,11 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="fcpe@localhost" uuid="5791160d-d537-4038-a97f-363e70c3bb1c">
-      <database-info product="PostgreSQL" version="9.6.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1212">
+      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
+      <user-name>max</user-name>
       <introspection-schemas>fcpe:public</introspection-schemas>
     </data-source>
   </component>

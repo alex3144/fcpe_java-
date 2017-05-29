@@ -16,6 +16,8 @@ public interface EtablissementLocal {
 
     public void createEtablissement(EtablissementBO etablissement);
 
+    public List<QuestionBO> findAllQuestionsEtab(Integer Idetablissement);
+
     public EtablissementBO deleteEtablissement(EtablissementBO etablissement);
 
     public EtablissementBO updateEtablissement(EtablissementBO etablissement);

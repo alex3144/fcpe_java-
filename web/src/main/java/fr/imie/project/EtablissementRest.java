@@ -68,6 +68,13 @@ public class EtablissementRest {
 		return etablissementLocal.findOneCampagnes(Idetablissement, Idclasse, idcampagne);
 	}
 
+	/*GERER QUESTIONS D'UN ETABLISSEMENT */
+	@GET
+	@Path("/{idetab}/questions")
+	public List<QuestionBO> findAllQuestionsEtab(@PathParam("idetab") Integer Idetablissement){
+		return etablissementLocal.findAllQuestionsEtab(Idetablissement);
+	}
+
 	/*GERER QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
 
 	@GET

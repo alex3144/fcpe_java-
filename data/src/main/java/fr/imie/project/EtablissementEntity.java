@@ -19,6 +19,7 @@ import static javax.persistence.CascadeType.ALL;
         @NamedQuery(name = "Etablissement.findOneCampagnes", query = " SELECT c FROM CampagneEntity c JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp"),
         @NamedQuery(name = "Etablissement.findQuestionnaire", query = "SELECT qe FROM CampagneEntity c JOIN c.questionnaire qe JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp "),
         @NamedQuery(name = "Etablissement.findQuestions", query="SELECT qn FROM CampagneEntity c JOIN c.questionnaire qe JOIN qe.questions qn JOIN c.classe cl JOIN cl.etablissement e WHERE e.id= :idEtab AND cl.id = :idClass AND c.id = :idCamp"),
+        @NamedQuery(name = "Etablissement.findAllQuestionsEtab", query = "SELECT q FROM QuestionEntity q WHERE q.etablissement.id = :idEtab"),
         @NamedQuery(name = "Etablissement.findQuestion", query="SELECT qn FROM CampagneEntity c JOIN c.questionnaire qe JOIN qe.questions qn JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp AND qn.id  = :idqn")
 })
 
@@ -28,6 +29,10 @@ import static javax.persistence.CascadeType.ALL;
 public class EtablissementEntity {
     @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
+
+    public EtablissementEntity() {
+    }
+
     public int getId() {
         return id;
     }
@@ -35,7 +40,6 @@ public class EtablissementEntity {
     public void setId(int id) {
         this.id = id;
     }
-
     private String nom;
     private String numrue;
     private String nomrue;
@@ -54,6 +58,10 @@ public class EtablissementEntity {
     @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
     @JoinColumn(name="id")
     private List<QuestionnaireEntity> questionnaire;
+
+    @OneToMany(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
+    @JoinColumn(name="id")
+    private List<QuestionEntity> questions;
 
 
     @Basic

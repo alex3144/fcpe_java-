@@ -9,6 +9,9 @@
         <class>fr.imie.project.CampagneEntity</class>
         <class>fr.imie.project.ClasseEntity</class>
         <class>fr.imie.project.ConstituerEntity</class>
+        <class>fr.imie.project.EleveEntity</class>
+        <class>fr.imie.project.ParentEntity</class>
+        <class>fr.imie.project.EtrereponsableEntity</class>
         <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>

@@ -27,6 +27,7 @@ public class EtablissementEJB implements EtablissementLocal {
     public EtablissementEJB() {
     }
 
+
     @Override
     public List<EtablissementBO> findAllEtablissement() {
         @SuppressWarnings("unchecked")
@@ -116,6 +117,19 @@ public class EtablissementEJB implements EtablissementLocal {
     public QuestionBO findOneQuestion(Integer Idetablissement, Integer idclasse, Integer idcampagne, Integer idquestion){
         QuestionEntity questionEntity = (QuestionEntity) em.createNamedQuery("Etablissement.findQuestion", QuestionEntity.class).setParameter("idClass", idclasse).setParameter("idEtab", Idetablissement).setParameter("idCamp", idcampagne).setParameter("idqn", idcampagne).getSingleResult();
         QuestionBO questionsBO = QuestionBO.mapQuestionEntityToBO(questionEntity);
+        return questionsBO;
+    }
+
+    /*GERER QUESTIONS D'UN ETABLISSEMENT */
+
+    @Override
+    public List<QuestionBO> findAllQuestionsEtab(Integer Idetablissement) {
+        @SuppressWarnings("unchecked")
+        List<QuestionEntity> questionsEntity =  em.createNamedQuery("Etablissement.findAllQuestionsEtab", QuestionEntity.class).setParameter("idEtab", Idetablissement).getResultList();
+        List<QuestionBO> questionsBO = new ArrayList<QuestionBO>();
+        for(QuestionEntity questionentity : questionsEntity){
+            questionsBO.add(QuestionBO.mapQuestionEntityToBO(questionentity));
+        }
         return questionsBO;
     }
 
