@@ -7,8 +7,11 @@ package fr.imie.project.etablissement;
 import fr.imie.project.CampagneEntity;
 import fr.imie.project.ClasseEntity;
 import fr.imie.project.EtablissementEntity;
+import fr.imie.project.QuestionnaireEntity;
 import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.classe.ClasseBO;
+import fr.imie.project.questionnaire.QuestionnaireBO;
+
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -71,11 +74,30 @@ public class EtablissementEJB implements EtablissementLocal {
     /*GESTION DES CAMPAGNES */
 
     @Override
-    public List<CampagneBO> findAllCampagnes(EtablissementBO e) {
-        List<CampagneEntity> campagneEntity = em.createNamedQuery("Etablissement.findAllCampagnes", CampagneEntity.class).setParameter("id", e.getId()).getResultList();
+    public List<CampagneBO> findAllCampagnes(Integer Idetablissement, Integer idclasse) {
+        List<CampagneEntity> campagnesEntity = em.createNamedQuery("Etablissement.findAllCampagnes", CampagneEntity.class).setParameter("idEtab", Idetablissement).setParameter("idClass", idclasse).getResultList();
         List<CampagneBO> campagnesBO = new ArrayList<CampagneBO>();
 
+        for(CampagneEntity campagneEntity : campagnesEntity){
+            campagnesBO.add(CampagneBO.mapCampagneEntityToBO(campagneEntity));
+        }
         return campagnesBO;
+    }
+
+    @Override
+    public CampagneBO findOneCampagnes(Integer Idetablissement, Integer idclasse, Integer idcampagne) {
+        CampagneEntity campagneEntity = (CampagneEntity) em.createNamedQuery("Etablissement.findOneCampagnes",  CampagneEntity.class).setParameter("idEtab", Idetablissement).setParameter("idClass", idclasse).setParameter("idEtab", Idetablissement).setParameter("idCamp", idcampagne).getSingleResult();
+        CampagneBO campagneBO =  CampagneBO.mapCampagneEntityToBO(campagneEntity);
+        return campagneBO;
+    }
+
+
+    /*GERE QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
+
+    public QuestionnaireBO findQuestionnaire(Integer Idetablissement, Integer idclasse, Integer idcampagne){
+        QuestionnaireEntity questionnaireEntity = (QuestionnaireEntity) em.createNamedQuery("Etablissement.findQuestionnaire", QuestionnaireEntity.class).setParameter("idClass", idclasse).setParameter("idEtab", Idetablissement).setParameter("idCamp", idcampagne).getSingleResult();
+        QuestionnaireBO questionnaireBO = QuestionnaireBO.mapQuestionnaireEntityToBO(questionnaireEntity);
+        return questionnaireBO;
     }
 
     /*GESTION DES CLASSES */

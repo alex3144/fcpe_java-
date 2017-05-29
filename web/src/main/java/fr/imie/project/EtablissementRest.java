@@ -4,6 +4,7 @@ import fr.imie.project.campagne.CampagneBO;
 import fr.imie.project.etablissement.EtablissementBO;
 import fr.imie.project.etablissement.EtablissementLocal;
 import fr.imie.project.classe.ClasseBO;
+import fr.imie.project.questionnaire.QuestionnaireBO;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -52,14 +53,26 @@ public class EtablissementRest {
 		return Response.ok(etablissement).build();
 	}
 
-	/*GESTION DES CAMPAGNES */
+
+	/*GERER CAMPAGNE ETABLISSEMENTS */
+	@GET
+	@Path("/{idetab}/classe/{idclasse}/campagnes")
+	public List<CampagneBO> findAllClasse(@PathParam("idetab") Integer Idetablissement, @PathParam("idclasse") Integer Idclasse) {
+		return etablissementLocal.findAllCampagnes(Idetablissement, Idclasse);
+	}
 
 	@GET
-	@Path("/{id}/campagnes")
-	public List<CampagneBO> findAllCampagnes(@PathParam("id") Integer Idetablissement) {
-		EtablissementBO etablissementBO = new EtablissementBO();
-		etablissementBO.setId(Idetablissement);
-		return etablissementLocal.findAllCampagnes(etablissementBO);
+	@Path("/{idetab}/classe/{idclasse}/campagne/{idcampagne}")
+	public CampagneBO findAllClasse(@PathParam("idetab") Integer Idetablissement, @PathParam("idclasse") Integer Idclasse, @PathParam("idcampagne") Integer idcampagne) {
+		return etablissementLocal.findOneCampagnes(Idetablissement, Idclasse, idcampagne);
+	}
+
+	/*GERE QUESTIONNAIRE D'UNE CAMPAGNE D'UNE CLASSE D'UN ETABLISSEMENT */
+
+	@GET
+	@Path("/{idetab}/classe/{idclasse}/campagne/{idcampagne}/questionnaire")
+	public QuestionnaireBO findQuestionnaire(@PathParam("idetab") Integer Idetablissement, @PathParam("idclasse") Integer Idclasse, @PathParam("idcampagne") Integer idcampagne) {
+		return etablissementLocal.findQuestionnaire(Idetablissement, Idclasse, idcampagne);
 	}
 
 
@@ -95,6 +108,9 @@ public class EtablissementRest {
 		etablissementLocal.updateClasse(Idetab, idclasse);
 		return Response.ok(idclasse).build();
 	}
+
+
+
 
 
 }

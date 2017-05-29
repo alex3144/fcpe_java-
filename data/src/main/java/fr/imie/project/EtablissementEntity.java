@@ -15,9 +15,9 @@ import static javax.persistence.CascadeType.ALL;
         @NamedQuery(name = "Etablissement.findAll", query = "SELECT e FROM EtablissementEntity e"),
         @NamedQuery(name = "Etablissement.findOne", query = "SELECT e FROM EtablissementEntity e WHERE e.id =:id"),
         //requete sql de toutes les campagnes d'un etablissement
-        //@NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM EtablissementEntity e JOIN e.campagnes c WHERE c.etablissement.id=:id")
-
-        //@NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT camp FROM CampagneEntity camp  INNER JOIN ClasseEntity cl ON camp.id_classe = cl.id INNER JOIN EtablissementEntity e ON e.id = cl.id_etablissement WHERE e.id =:id")
+        @NamedQuery(name = "Etablissement.findAllCampagnes", query = "SELECT c FROM CampagneEntity c JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass"),
+        @NamedQuery(name = "Etablissement.findOneCampagnes", query = " SELECT c FROM CampagneEntity c JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp"),
+        @NamedQuery(name = "Etablissement.findQuestionnaire", query = "SELECT qe FROM CampagneEntity c JOIN c.questionnaire qe JOIN c.classe cl JOIN cl.etablissement e WHERE e.id=:idEtab AND cl.id = :idClass AND c.id = :idCamp ")
 
 
 
